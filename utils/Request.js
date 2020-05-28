@@ -42,7 +42,7 @@ function Request({ url, data, method, success, fail, complete }) {
           if (fail) {
             fail(res);
           }
-        }else if (msg === "Token已过期" || msg === "Token不存在") {
+        } else if (msg === "Token已过期" || msg === "Token不存在") {
           //抛出错误信息提示用户(最多7字)
           wx.showToast({
             title: msg === "Token已过期" ? '登录已过期' : "您尚未登录",
